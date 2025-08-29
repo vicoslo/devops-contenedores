@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  # Servicio para la aplicación Node.js
+  app:
+#    build: .
+    image: vicoslo/devops-contenedores-app-nodejs:0.1
+    ports:
+      - "3001:3000"
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/mydatabase
+    networks:
+      - app-network
+
+  # Servicio para la base de datos MongoDB
+  mongodb:
+    image: vicoslo/devops-contenedores-mongo:0.1
+#    image: mongo:latest
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongodb-data:/data/db
+    networks:
+      - app-network
+
+# Definición de la red y los volúmenes
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mongodb-data:
