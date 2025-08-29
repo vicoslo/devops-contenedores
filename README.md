@@ -16,6 +16,10 @@ Para poder levantar el stack debe seguir los sigueintes pasos:
 
 3.- docker-compose up -d
 
+4.- dirigise a su navegador y colocar http://localhost:3001
+
+5.- Para ingresas a la base de datos los datos de coneccion estan seteados en el docker-compose.yml por el puerto 27018 desde el host local
+
 LOGS:
 
 1.- docker-compose logs -f
