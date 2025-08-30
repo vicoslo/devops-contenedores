@@ -20,8 +20,12 @@ Para poder levantar el stack debe seguir los sigueintes pasos:
 
 5.- Para ingresas a la base de datos los datos de coneccion estan seteados en el docker-compose.yml por el puerto 27018 desde el host local
 
-LOGS:
+Nota:
+-----
+Si desea hacer cambios y aplicarlosen las fuentes luego volver a compilar la imagen o tambien puede hacerlo desde el docker-compose.yml decomentando la linea build . y debera comentar la linea image o cambiar el nombre de la image para que pueda crearse la una nueva imagen.
 
+LOGS:
+-----
 1.- docker-compose logs -f
 
 2.- docker-compose logs
